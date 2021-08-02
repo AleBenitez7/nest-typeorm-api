@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TaskModule } from './task/task.module';
+import { SubTasksModule } from './sub-tasks/sub-tasks.module';
 
 @Module({
   imports: [
@@ -11,7 +12,7 @@ import { TaskModule } from './task/task.module';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'admin',
+      password: '1234',
       database: 'tasks',
       entities: [__dirname + './**/**/*entity{.ts,.js}'],
       autoLoadEntities: true,
@@ -19,7 +20,8 @@ import { TaskModule } from './task/task.module';
       logging: true,
       logger: 'file',
     }),
-    TaskModule],
+    TaskModule,
+    SubTasksModule],
   controllers: [AppController],
   providers: [AppService],
 })
