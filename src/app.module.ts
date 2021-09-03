@@ -12,7 +12,7 @@ import { SubTasksModule } from './sub-tasks/sub-tasks.module';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: '1234',
+      password: 'admin',
       database: 'tasks',
       entities: [__dirname + './**/**/*entity{.ts,.js}'],
       autoLoadEntities: true,
